@@ -3,13 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		E7373AF324F59C98005B3696 /* StoryboardWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7373AE924F59C98005B3696 /* StoryboardWorkshop.framework */; };
 		E7373AF824F59C98005B3696 /* StoryboardWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7373AF724F59C98005B3696 /* StoryboardWorkshopTests.swift */; };
 		E7373AFA24F59C98005B3696 /* StoryboardWorkshop.h in Headers */ = {isa = PBXBuildFile; fileRef = E7373AEC24F59C98005B3696 /* StoryboardWorkshop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E783384524F5AF72003111BF /* DeviceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E783384424F5AF72003111BF /* DeviceConstants.swift */; };
+		E783384824F5B006003111BF /* DeviceBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E783384724F5B006003111BF /* DeviceBlueprint.swift */; };
+		E783384B24F5B52F003111BF /* IdentifierGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E783384A24F5B52F003111BF /* IdentifierGenerator.swift */; };
+		E783384E24F5BBA3003111BF /* ViewControllerBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E783384D24F5BBA3003111BF /* ViewControllerBlueprint.swift */; };
+		E783385224F5BE53003111BF /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = E783385124F5BE53003111BF /* XMLCoder */; };
+		E783385424F5BE84003111BF /* StoryboardGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E783385324F5BE84003111BF /* StoryboardGenerator.swift */; };
+		E783385824F5BF94003111BF /* DocumentBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E783385724F5BF94003111BF /* DocumentBlueprint.swift */; };
+		E783385A24F5C2B8003111BF /* DependenciesBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E783385924F5C2B8003111BF /* DependenciesBlueprint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,13 @@
 		E7373AF224F59C98005B3696 /* StoryboardWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryboardWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7373AF724F59C98005B3696 /* StoryboardWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardWorkshopTests.swift; sourceTree = "<group>"; };
 		E7373AF924F59C98005B3696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E783384424F5AF72003111BF /* DeviceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConstants.swift; sourceTree = "<group>"; };
+		E783384724F5B006003111BF /* DeviceBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBlueprint.swift; sourceTree = "<group>"; };
+		E783384A24F5B52F003111BF /* IdentifierGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierGenerator.swift; sourceTree = "<group>"; };
+		E783384D24F5BBA3003111BF /* ViewControllerBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBlueprint.swift; sourceTree = "<group>"; };
+		E783385324F5BE84003111BF /* StoryboardGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardGenerator.swift; sourceTree = "<group>"; };
+		E783385724F5BF94003111BF /* DocumentBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBlueprint.swift; sourceTree = "<group>"; };
+		E783385924F5C2B8003111BF /* DependenciesBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesBlueprint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E783385224F5BE53003111BF /* XMLCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +87,7 @@
 		E7373AEB24F59C98005B3696 /* StoryboardWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				E783383924F5A8E5003111BF /* sources */,
 				E7373AEC24F59C98005B3696 /* StoryboardWorkshop.h */,
 				E7373AED24F59C98005B3696 /* Info.plist */,
 			);
@@ -84,6 +101,44 @@
 				E7373AF924F59C98005B3696 /* Info.plist */,
 			);
 			path = StoryboardWorkshopTests;
+			sourceTree = "<group>";
+		};
+		E747E5DD24F5C666008BDA8A /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				E783384424F5AF72003111BF /* DeviceConstants.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
+		E783383924F5A8E5003111BF /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				E747E5DD24F5C666008BDA8A /* constants */,
+				E783385524F5BF36003111BF /* blueprints */,
+				E783384924F5B518003111BF /* generator */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		E783384924F5B518003111BF /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				E783385324F5BE84003111BF /* StoryboardGenerator.swift */,
+				E783384A24F5B52F003111BF /* IdentifierGenerator.swift */,
+			);
+			path = generator;
+			sourceTree = "<group>";
+		};
+		E783385524F5BF36003111BF /* blueprints */ = {
+			isa = PBXGroup;
+			children = (
+				E783385724F5BF94003111BF /* DocumentBlueprint.swift */,
+				E783384724F5B006003111BF /* DeviceBlueprint.swift */,
+				E783385924F5C2B8003111BF /* DependenciesBlueprint.swift */,
+				E783384D24F5BBA3003111BF /* ViewControllerBlueprint.swift */,
+			);
+			path = blueprints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +169,9 @@
 			dependencies = (
 			);
 			name = StoryboardWorkshop;
+			packageProductDependencies = (
+				E783385124F5BE53003111BF /* XMLCoder */,
+			);
 			productName = StoryboardWorkshop;
 			productReference = E7373AE924F59C98005B3696 /* StoryboardWorkshop.framework */;
 			productType = "com.apple.product-type.framework";
@@ -148,6 +206,7 @@
 				TargetAttributes = {
 					E7373AE824F59C98005B3696 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					E7373AF124F59C98005B3696 = {
 						CreatedOnToolsVersion = 11.6;
@@ -163,6 +222,9 @@
 				Base,
 			);
 			mainGroup = E7373ADF24F59C98005B3696;
+			packageReferences = (
+				E783385024F5BE53003111BF /* XCRemoteSwiftPackageReference "XMLCoder" */,
+			);
 			productRefGroup = E7373AEA24F59C98005B3696 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E783384524F5AF72003111BF /* DeviceConstants.swift in Sources */,
+				E783385424F5BE84003111BF /* StoryboardGenerator.swift in Sources */,
+				E783384824F5B006003111BF /* DeviceBlueprint.swift in Sources */,
+				E783384E24F5BBA3003111BF /* ViewControllerBlueprint.swift in Sources */,
+				E783385824F5BF94003111BF /* DocumentBlueprint.swift in Sources */,
+				E783384B24F5B52F003111BF /* IdentifierGenerator.swift in Sources */,
+				E783385A24F5C2B8003111BF /* DependenciesBlueprint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +409,7 @@
 		E7373AFE24F59C98005B3696 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 37L7BN93A5;
@@ -357,6 +427,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.nitochkin.StoryboardWorkshop;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +436,7 @@
 		E7373AFF24F59C98005B3696 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 37L7BN93A5;
@@ -390,6 +462,7 @@
 		E7373B0124F59C98005B3696 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37L7BN93A5;
 				INFOPLIST_FILE = StoryboardWorkshopTests/Info.plist;
@@ -408,6 +481,7 @@
 		E7373B0224F59C98005B3696 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37L7BN93A5;
 				INFOPLIST_FILE = StoryboardWorkshopTests/Info.plist;
@@ -454,6 +528,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E783385024F5BE53003111BF /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MaxDesiatov/XMLCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E783385124F5BE53003111BF /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E783385024F5BE53003111BF /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7373AE024F59C98005B3696 /* Project object */;
 }
